@@ -1,0 +1,10 @@
+[
+    {
+        "ParameterKey": "vpcIpv4CicdBlock",
+        "ParameterValue": "10.0.0.0/16"
+    },
+    {
+        "ParameterKey": "vpcNameTag",
+        "ParameterValue": "test-vpc"
+    }
+]

@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Sample CloudFormation Template
+
+Parameters:
+  vpcIpv4CicdBlock:
+    Type: String
+    Default: 10.0.0.0/16
+  vpcNameTag:
+    Type: String
+
+Resources:
+  myVPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: !Ref vpcIpv4CicdBlock
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: Name
+          Value: !Ref vpcNameTag
+
+Outputs:
+  myVpcId:
+    Description: VPC ID
+    Value: !Ref myVPC
+    Export: 
+      Name: myVpcId

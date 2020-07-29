@@ -1,0 +1,9 @@
+global:
+  qsname: sample-project
+  regions:
+    - us-west-2
+  reporting: true
+tests:
+  test1:
+    parameter_input: my-vpc-input.json
+    template_file: my-vpc.template
